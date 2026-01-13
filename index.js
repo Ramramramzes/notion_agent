@@ -1,4 +1,4 @@
-import { getTaskList } from "./src/modules/getTaskList.js";
+import { generateTrainingJsonForGpt } from "./src/actions/Training/generateTrainingJsonForGpt.js";
 
-const trainingList = await getTaskList("2026-01-01", "2026-01-13", "Тренировка", true, "descending");
-console.log(trainingList);
+const workOuts = await generateTrainingJsonForGpt();
+console.log(workOuts);
