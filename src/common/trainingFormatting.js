@@ -14,7 +14,7 @@ export const gptFormatting = (arr, date, name) => {
   }];
   for (let i = 1; i < arr.length; i++) {
     let exercise = {
-      weight: arr[i][0],
+      weight: {values: arr[i][0], unit: arr[i][0].toLowerCase().includes("lbs") ? "lbs" : "kg"},
       exercise: arr[i][1],
       set1: arr[i][2],
       set2: arr[i][3],

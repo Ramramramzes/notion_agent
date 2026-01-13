@@ -11,6 +11,12 @@ const HEADERS_WITH_SECRET = {
   }
 };
 
+const HEADERS_OPEN_AI = {
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${process.env.OPEN_AI}`,
+  }
+};
 const TASK_DATABASE_ID = "067c9bb7f0894b5988f6b6d4a23d2df1";
 
-export { axios, HEADERS_WITH_SECRET, TASK_DATABASE_ID };
+export { axios, HEADERS_WITH_SECRET, HEADERS_OPEN_AI, TASK_DATABASE_ID };

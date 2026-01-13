@@ -3,7 +3,7 @@ import { getTaskList } from "../../modules/getTaskList.js";
 
 export const generateTrainingJsonForGpt = async () => {
   // Тестирование функции получения списка задач
-  const trainingList = await getTaskList("2026-01-10", "2026-01-13", "Тренировка", true, "descending");
+  const trainingList = await getTaskList("2025-11-04", "2026-01-13", "Тренировка", true, "descending");
 
   // Создаем массив промисов для каждой тренировки
   const promises = trainingList.results.map(async (training) => {
